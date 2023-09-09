@@ -1,12 +1,12 @@
 <?php 
-$contrasena = "";
-$usuario = "root";
+$contrasena = "admin123";
+$usuario = "admin";
 $nombre_bd = "crud";
-
+$url_db = "awsdb.coc1tvi2xdlk.us-east-1.rds.amazonaws.com";
+//mysql:host=$host;dbname=$dbname
 try {
 	$bd = new PDO (
-		'mysql:host=localhost;
-		dbname='.$nombre_bd,
+		"mysql:host=$url_db;dbname=$nombre_bd",
 		$usuario,
 		$contrasena,
 		array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")

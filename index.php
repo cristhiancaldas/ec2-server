@@ -60,6 +60,18 @@
                 }
             ?> 
 
+
+            <?php 
+                if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'eliminado'){
+            ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Eliminado!</strong> Los datos fueron borrados.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php 
+                }
+            ?> 
+
             <!-- fin alerta -->
             <div class="card">
                 <div class="card-header">
@@ -73,6 +85,7 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Edad</th>
                                 <th scope="col">Signo</th>
+                                <th scope="col" colspan="2">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,6 +99,8 @@
                                 <td><?php echo $dato->nombre; ?></td>
                                 <td><?php echo $dato->edad; ?></td>
                                 <td><?php echo $dato->signo; ?></td>
+                                <td><a class="text-success" href="editar.php?codigo=<?php echo $dato->codigo; ?>"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="eliminar.php?codigo=<?php echo $dato->codigo; ?>"><i class="bi bi-trash"></i></a></td>
                             </tr>
 
                             <?php 
