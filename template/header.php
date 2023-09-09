@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>CRUD php y mysql b5</title>
+    <title>Bootcamp - CRUD php y mysql</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,7 @@
           <div class="row">
               <div class="col-md">
                   <header class="py-3">
-                      <h3 class="text-center">CRUD PHP con Bootstrap 5</h3>
+                      <h3 class="text-center">Bootcamp - CRUD PHP con Bootstrap 5</h3>
                   </header>
               </div>
           </div>
